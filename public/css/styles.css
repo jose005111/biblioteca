@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  background-image: url('../image/3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.colum {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+.item1 {
+  background-color: #953c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 h1{  
+  color: #fff;
+}
+
+.item2, .item3 {
+  display: block;
+  min-height: 100vh;
+}
+.item2 {
+  background-color: #953c2cb6;
+}
+ .item3{
+  background-color: #a67051c9;
+}
+/*Barra de menus vertical*/
+nav ul{
+list-style-type: none;
+margin-top: 2px;
+}
+nav a{
+  display: block;
+  color: white;
+  padding: 20px 10px;
+  text-decoration: none;
+  font-size: 25px;
+}
+nav a:hover, a.active{
+  background-color: #953c2c;
+}
+/*formulário de login e cadastro*/
+.login{
+  width: 400px;
+  margin: 200px auto;
+}
+.register{
+  width: 400px;
+  margin: 100px auto;
+}
+.form .icon {
+  width: 70px;
+  display: block;
+  margin: 0px auto;
+}
+.clear::before,
+.clear::after{
+  content: "";
+  display: table;
+}
+.clear::after{
+  clear: both;
+}
+.form form{
+  padding: 10px;
+  background-color: #f2e8d5;
+  border-radius: 10px;
+  color: #bf4215;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px #953c2c;
+}
+
+label {
+  display: block;
+  width: 200px;
+  margin: 5px 0px;
+}
+
+select,
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"]{
+  display: block;
+  width: 380px;
+  padding: 10px;
+  border: 1px solid #d9b596;
+  border-radius: 8px;
+}
+button[type="button"],
+input[type="reset"],
+input[type="submit"]{
+  background-color: white;
+  border: 1px solid #d9b596;
+  border-radius: 8px;
+}
+.btn-search{
+  background-color: white;
+  border: 1px solid #d9b596;
+  border-radius: 8px;
+  padding: 10px;
+}
+.search{
+  display: inline;
+  width: 340px;
+  padding: 10px;
+  border: 1px solid #d9b596;
+  border-radius: 8px;
+}
+button[type="submit"]:hover,
+button[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover{
+  background-color: #bf4215;
+  color: white;
+}
+
+button[type="submit"]:active,
+button[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active{
+  background-color: #953c2c;
+  color: white;
+  transform: scale(1.1);
+}
+
+.footer{
+  margin: 10px auto;
+}
+.footer button a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.footer button,
+.footer input{
+  float: right;
+  margin: 5px;
+  padding: 5px;
+}
+.footer a{
+  color: #953c2c;
+}
+
+main{
+  margin: 10px 10px;
+}
+
+
+.content{    
+  padding: 20px;
+}
+
+main .form-livro{
+  float: left;
+}
+.form-livro form{
+  background-color: rgba(255, 255, 255, 0.541);
+  padding: 10px;
+  margin: 0px 0px 20px 0px;
+  border-radius: 10px;
+  color: #bf4215;
+}
+.form-contact form{
+  background-color: rgba(255, 255, 255, 0.541);
+  padding: 10px;
+  margin: 0px 0px 20px 0px;
+  border-radius: 10px;
+  color: #bf4215;
+}
+
+main .table{
+  float: right;
+  max-height: 500px;
+  max-width: 650px;
+  overflow-y: auto;
+}
+table {  
+  width: 100%;
+  border-collapse: collapse;  
+  text-align: center;
+}  
+th, td {  
+  border: 1px solid #ccc;  
+  padding: 10px;
+}  
+td{
+  color: white;
+}
+th {  
+  color: #a67051;
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+}  
+
+.titulo{
+  background-color: #a67051;
+  padding: 5px 20px;
+  color: white;
+}
+table a{
+  color: #ffffff;
+}
+  /*Dashboard*/
+
+  .card{
+    display: inline-block;
+    margin: 20px;
+    background-color: #ccc;
+    width: 300px;
+  }
+
+  .card span{
+    display: inline-block;
+    margin: 0px 110px;
+    color: white;
+  }
+
+  .card h2{
+    background-color: #a67051;
+    padding: 10px;
+    margin-bottom:10px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+  }
+  .card h3{
+    background-color: #a67051;
+    padding: 10px;
+    margin-top:10px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /*modal*/
+  
+#modal, #modal-logo {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin: -95px 0 0 -200px;
+  z-index: 2;
+}
+
+#back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+#back,
+#modal, 
+#modal-logo{
+  display: none;
+}
+
+#modal h2{
+  color: white;
+  text-align: center;
+  margin: 10px;
+}
+
+.top{
+  display: flex;
+  padding: 5px 0px;
+}
+.top .btn{
+  margin-right: 10px;
+  padding: 0px 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #953c2c;
+}
+.top .btn:hover{
+  background-color: #791f0f;
+}
