@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LeitorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +30,14 @@ Route::get('/livro', function(){
     return view('livro.index');    
 })->name('livro.index');
 
-Route::get('/leitor', function(){
-    return view('leitor.index');    
-})->name('leitor.index');
+/* Rotas de Leitores*/
+Route::put('/leitor/update', [LeitorController::class, 'update'])->name('leitor.update');
+Route::post('/leitor', [LeitorController::class, 'store'])->name('leitor.store');
+Route::get('/leitor', [LeitorController::class, 'index'])->name('leitor.index');
+// Route::get('/leitor/{id}/edit', [LeitorController::class, 'edit'])->name('leitor.edit');
+Route::get('/leitor/{id}', [LeitorController::class, 'destroy'])->name('leitor.destroy');
+// Route::post('/leitor/search', [LeitorController::class, 'search'])->name('leitor.search');
+// Route::get('/leitor/{id}/show', [LeitorController::class, 'show'])->name('leitor.show');
 
 Route::get('/emprestimo', function(){
     return view('emprestimo.index');    
